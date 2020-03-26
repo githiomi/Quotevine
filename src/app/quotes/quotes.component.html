@@ -1,0 +1,22 @@
+<div id="newQuote">
+<app-new-quote></app-new-quote>
+
+<div class="container">
+   <hr>
+   <h2>Your Quotes</h2>
+      <div *ngFor ='let quote of quotes' id='postedQuotes'>
+         <span class="index">{{ quote.id }}</span> <br><br>
+         "<span class="quote">{{quote.actQuote}}</span>" <br><br>
+
+         <img class="reaction" src="../../assets/thumbsup.png" height="20px" width="20px">
+         <img class="reaction" src="../../assets/thumbsdown.png" height="20px" width="20px"><br>
+         <div class="mouseClick">
+            <img (click)=toggleDetails(i); class="mouse" src="../../assets/mouse_click.png" height="20px" width="15px">
+         </div>
+      </div>
+
+
+   <hr>
+</div>
+</div>
+

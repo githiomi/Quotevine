@@ -1,0 +1,49 @@
+#header{
+   padding: 5px;
+   background-color: wheat;
+   border-top: 5px solid black;
+   text-align: center;
+   font-family: Apple Chancery, cursive;
+}
+
+#personalDetails{
+   padding: 15px;
+}
+
+#profilePic{
+   cursor: pointer;
+   margin: 20px;
+   width: 200px;
+   height: 200px;
+   border-radius: 100%;
+   background: url('../../assets/profilepic.jpeg');
+   background-position: center;
+   float: left;
+}
+#accDetails{
+   margin: 20px;
+   padding: 35px;
+   margin-left: 250px;
+}
+
+.details{
+   font-weight: bold;
+   padding: 5px;
+}
+   .details:hover{
+      cursor: pointer;
+      border-bottom: 2px solid wheat;
+      padding-bottom: 3px;
+      transition: all 0.5s ease-in;
+   }
+
+.editable{
+   cursor: pointer;
+   float: right;
+   margin: 10px;
+   padding: 10px;
+   border: 2px solid black;
+   border-radius: 10px;
+   background-color: teal;
+   color: white;
+}
