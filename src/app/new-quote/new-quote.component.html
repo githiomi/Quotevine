@@ -6,19 +6,22 @@
    <span class="dets">Fill in the form and post your new quote</span>
    <br>
    <div class="container-fluid">
-    <form #quoteForm = 'ngForm' () >
+    <form #quoteForm = 'ngForm' >
 
-      <div [hidden] = 'authorName.valid || authorName.pristine' class="blinker">
-         <div class="form-group">
-          <label for="author"> Name of Author: </label>
-          <input type = 'text' id="authorName" class="form-control" [(ngModel)] = 'latestPost.author' name = 'author' #authorName = 'ngModel' required>
-         </div>
-         <p id="errorMessage">Field Must Be Filled!</p>
+      <div class="form-group">
+             <label for="author"> Name of Author: </label>
+             <input type = 'text' id="authorName" class="form-control" [(ngModel)] = 'latestPost.author' name = 'author' #aName = 'ngModel' required>
+          <div [hidden] = 'aName.valid || aName.pristine' class="blinker">
+             <p id="errorMessage">Field Must Be Filled!</p>
+          </div>
       </div>
 
       <div class="form-group">
-         <label for="actQuote"> Quote: </label>
-         <textarea rows = "4" id="actQuote" class="form-control" [(ngModel)] = 'latestPost.actQuote' name = 'actQuote' #actQuote = 'ngModel' required></textarea>
+            <label for="actQuote"> Quote: </label>
+            <textarea rows = "4" id="actQuote" class="form-control" [(ngModel)] = 'latestPost.actQuote' name = 'actQuote' #act = 'ngModel' required></textarea>
+         <div [hidden] = 'act.valid || act.pristine' class="blinker">
+            <p id="errorMessage">Field Must Be Filled!</p>
+         </div>
       </div>
 
       <button type="submit" id="submit" class="btn-warning"> Post Quote </button>
