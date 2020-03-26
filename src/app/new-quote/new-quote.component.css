@@ -20,7 +20,7 @@ h2{
    margin-top: 20px;
 }
 
-#submit{
+.btn-warning{
    cursor: pointer;
    margin: 10px 0px 0px 45%;
    padding: 5px;

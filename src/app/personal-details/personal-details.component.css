@@ -38,6 +38,7 @@
    }
 
 .editable{
+   font-size: small;
    cursor: pointer;
    float: right;
    margin: 10px;

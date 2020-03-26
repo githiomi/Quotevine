@@ -10,6 +10,12 @@ export class NewQuoteComponent implements OnInit {
 
   latestPost = new Quotes (0, "", "", 0, 0);
 
+  @Output() newQuote = new EventEmitter<Quotes>();
+
+  postNewQuote (){
+    this.newQuote.emit(this.latestPost);
+  }
+
   constructor() { }
 
   ngOnInit(): void {

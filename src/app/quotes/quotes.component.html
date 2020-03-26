@@ -13,7 +13,7 @@
          <span class="mouseClick">
             <img (click)='toggleDetails(i)' class="mouse" src="../../assets/mouse_click.png" height="20px" width="15px">
          </span>
-         <app-quote-details *ngIf='quote.additionalInfo' [quotes]='quote' ></app-quote-details>
+         <app-quote-details  (newQuote) = 'postNewQuote($event)' *ngIf='quote.additionalInfo' [quotes]='quote'></app-quote-details>
       </div>
 
    <hr>

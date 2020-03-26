@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { PersonalDetails } from './personal-details';
+import { Component, OnInit, Input } from '@angular/core';
+import { Quotes } from '../quotes/quotes';
 
 @Component({
   selector: 'app-personal-details',
@@ -10,7 +10,6 @@ export class PersonalDetailsComponent implements OnInit {
 
   username = 'daniel_githiomi';
   name = 'Daniel Githiomi';
-  quotesPosted = 2;
 
   constructor() { }
 

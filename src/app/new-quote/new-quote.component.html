@@ -6,7 +6,7 @@
    <span class="dets">Fill in the form and post your new quote</span>
    <br>
    <div class="container-fluid">
-    <form #quoteForm = 'ngForm' >
+    <form #quoteForm = 'ngForm' (ngSubmit) = 'postNewQuote()' >
 
       <div class="form-group">
              <label for="author"> Name of Author: </label>
@@ -24,7 +24,7 @@
          </div>
       </div>
 
-      <button type="submit" id="submit" class="btn-warning"> Post Quote </button>
+      <button type="submit" class="btn btn-warning"> Post Quote </button>
     </form>
    </div>
 
