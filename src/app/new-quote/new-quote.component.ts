@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Quotes } from '../quotes/quotes';
 
 @Component({
   selector: 'app-new-quote',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./new-quote.component.css']
 })
 export class NewQuoteComponent implements OnInit {
+
+  latestPost = new Quotes (0, "", "", 0, 0);
 
   constructor() { }
 

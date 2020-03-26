@@ -3,7 +3,7 @@
 
 <div class="container">
    <hr>
-   <h2>Your Quotes</h2>
+   <h2><span style="padding: 5px; border-bottom: 2px solid wheat;">Your Posted Quotes </span></h2>
       <div *ngFor ='let quote of quotes; let i = index' id='postedQuotes'>
          <span class="index">{{ quote.id }}</span> <br><br>
          "<span class="quote">{{quote.actQuote}}</span>" <br>
@@ -13,7 +13,7 @@
          <div class="mouseClick">
             <img (click)='toggleDetails(i)' class="mouse" src="../../assets/mouse_click.png" height="25px" width="10px">
          </div>
-         <app-quote-details *ngIf='quotes.additionalInfo' [quotes]='quote' ></app-quote-details>
+         <app-quote-details *ngIf='quote.additionalInfo' [quotes]='quote' ></app-quote-details>
       </div>
 
    <hr>
