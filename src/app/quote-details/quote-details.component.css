@@ -1,0 +1,25 @@
+#addInfo{
+   background-color: black;
+   color: teal;
+   padding: 10px;
+   border-radius: 15px;
+}
+#author{
+   padding: 3px;
+   border-bottom: 2px solid wheat;
+}
+.reactions{
+   margin-left: 70%;
+}
+
+img{
+   padding: 0px 10px 0px 10px;
+}
+
+.thumbsup, .thumbsdown{
+   background-color: white;
+   border-radius: 15px;
+   font-size: small;
+   padding: 3px;
+   color: teal;
+}
