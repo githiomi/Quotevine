@@ -8,11 +8,11 @@
          <span class="index">{{ quote.id }}</span> <br><br>
          "<span class="quote">{{quote.actQuote}}</span>" <br>
 
-         <img class="reaction" src="../../assets/thumbsup.png" height="20px" width="20px">
-         <img class="reaction" src="../../assets/thumbsdown.png" height="20px" width="20px"><br>
-         <div class="mouseClick">
-            <img (click)='toggleDetails(i)' class="mouse" src="../../assets/mouse_click.png" height="25px" width="10px">
-         </div>
+         <img class="reaction" src="../../assets/thumbsup.png" height="35px" width="35px">
+         <img class="reaction" src="../../assets/thumbsdown.png" height="35px" width="35px"><br>
+         <span class="mouseClick">
+            <img (click)='toggleDetails(i)' class="mouse" src="../../assets/mouse_click.png" height="20px" width="15px">
+         </span>
          <app-quote-details *ngIf='quote.additionalInfo' [quotes]='quote' ></app-quote-details>
       </div>
 

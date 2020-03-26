@@ -40,7 +40,10 @@ h2{
    margin: 5px;
 }
 
-.mouse{
-   cursor: pointer;
+.mouseClick{
    padding-left: 50%;
+}
+
+img{
+   cursor: pointer;
 }
