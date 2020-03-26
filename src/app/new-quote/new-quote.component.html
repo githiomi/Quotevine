@@ -6,16 +6,19 @@
    <span class="dets">Fill in the form and post your new quote</span>
    <br>
    <div class="container-fluid">
-    <form #quoteForm = 'ngForm' >
+    <form #quoteForm = 'ngForm' () >
 
-      <div class="form-group">
-         <label for="author"> Name of Author: </label>
-         <input type = 'text' id="authorName" class="form-control" [(ngModel)] = 'latestPost.author' name = 'author' required>
+      <div [hidden] = 'authorName.valid || authorName.pristine' class="blinker">
+         <div class="form-group">
+          <label for="author"> Name of Author: </label>
+          <input type = 'text' id="authorName" class="form-control" [(ngModel)] = 'latestPost.author' name = 'author' #authorName = 'ngModel' required>
+         </div>
+         <p id="errorMessage">Field Must Be Filled!</p>
       </div>
 
       <div class="form-group">
          <label for="actQuote"> Quote: </label>
-         <textarea rows = "4" id="actQuote" class="form-control" [(ngModel)] = 'latestPost.actQuote' name = 'actQuote' required></textarea>
+         <textarea rows = "4" id="actQuote" class="form-control" [(ngModel)] = 'latestPost.actQuote' name = 'actQuote' #actQuote = 'ngModel' required></textarea>
       </div>
 
       <button type="submit" id="submit" class="btn-warning"> Post Quote </button>
