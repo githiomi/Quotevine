@@ -10,11 +10,19 @@
    padding: 15px;
 }
 
+.accHeader{
+   padding: 7px;
+   padding-top: 10px;
+   border-bottom: 2px solid wheate;
+   border-radius: 10px;
+   box-shadow: 2px 0px 0px 2px wheat;
+}
+
 #profilePic{
    cursor: pointer;
    margin: 20px;
-   width: 200px;
-   height: 200px;
+   width: 250px;
+   height: 250px;
    border-radius: 100%;
    background: url('../../assets/profilepic.jpeg');
    background-position: center;
@@ -32,9 +40,8 @@
 }
    .details:hover{
       cursor: pointer;
-      border-bottom: 2px solid wheat;
+      border-bottom: 2px solid teal;
       padding-bottom: 3px;
-      transition: all 0.5s ease-in;
    }
 
 .editable{
@@ -45,6 +52,5 @@
    padding: 10px;
    border: 2px solid black;
    border-radius: 10px;
-   background-color: teal;
-   color: white;
+   background-color: wheat;
 }

@@ -2,8 +2,8 @@
    Quote by: <span id="author">{{ quotes.author }}</span>
    
    <span class="reactions">
-      <img src="../../assets/thumbsup.png" height="25px" width="40px"><span class="thumbsup">{{ quotes.upVote }}</span>
-      <img src="../../assets/thumbsdown.png" height="25px" width="40px"><span class="thumbsdown">{{ quotes.downVote }}</span>
+      <img  (click)='addUpVote()' src="../../assets/thumbsup.png" height="25px" width="40px" ><span class="thumbsup">{{ quotes.upVote }}</span>
+      <img (click)='addDownVote()' src="../../assets/thumbsdown.png" height="25px" width="40px"><span class="thumbsdown">{{ quotes.downVote }}</span>
    </span>
    
 </div>

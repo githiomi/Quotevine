@@ -10,7 +10,7 @@
    border-bottom: 2px solid wheat;
 }
 .reactions{
-   margin-left: 65%;
+   float: right;
 }
 
 img{
