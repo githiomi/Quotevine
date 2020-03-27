@@ -13,7 +13,11 @@ export class NewQuoteComponent implements OnInit {
   @Output() newQuote = new EventEmitter<Quotes>();
 
   postNewQuote (){
+    if (this.latestPost.author == "" && this.latestPost.actQuote == ""){
+      alert("You must fill the author and quote fields to post!");
+    }else{
     this.newQuote.emit(this.latestPost);
+    }
   }
 
   constructor() { }
