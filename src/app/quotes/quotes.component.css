@@ -32,6 +32,16 @@ h2{
    float: right;
    padding: 5px;
 }
+
+.time{
+   margin: 10px;
+   background-color: white;
+   border-radius: 15px;
+   font-size: small;
+   padding: 5px;
+   color: teal;
+}
+
 .quote{
    font-style: italic;
    font-family: 'Courier New', Courier, monospace;

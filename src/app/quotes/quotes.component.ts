@@ -9,9 +9,9 @@ import { Quotes } from './quotes';
 export class QuotesComponent implements OnInit {
 
   quotes: Quotes[] = [
-    new Quotes(1, "William Shakespeare", "And as imagination bodies forth, the forms of things unknown, the poet’s pen turns them to shapes and gives to airy nothing a local habitation and a name.", 10, 3),
-    new Quotes(2, "Somerset Maugham", "If you can tell stories, create characters, devise incidents, and have sincerity and passion, it doesn’t matter a damn how you write.", 7, 19),
-    new Quotes(3, "Abraham Lincon", "America will never be destroyed from the outside. If we falter and lose our freedoms, it will be because we destroyed ourselves", 17, 8)
+    new Quotes(1, "William Shakespeare", "And as imagination bodies forth, the forms of things unknown, the poet’s pen turns them to shapes and gives to airy nothing a local habitation and a name.", 10, 3, new Date(Date.now())),
+    new Quotes(2, "Somerset Maugham", "If you can tell stories, create characters, devise incidents, and have sincerity and passion, it doesn’t matter a damn how you write.", 7, 19, new Date(Date.now())),
+    new Quotes(3, "Abraham Lincon", "America will never be destroyed from the outside. If we falter and lose our freedoms, it will be because we destroyed ourselves", 17, 8, new Date(Date.now()))
   ];
 
   toggleDetails(index){
@@ -21,8 +21,7 @@ export class QuotesComponent implements OnInit {
   deleteQuote(index){
     let toDelete = confirm('Are you sure you want to delete this quote? This action cannot be reversed!');
     if (toDelete){
-      alert(`${this.quotes[index]}`);
-      this.quotes.splice(index);
+      this.quotes[index].splice(index);
     }else{
       alert("Pheew! Your quote remains")
     }
