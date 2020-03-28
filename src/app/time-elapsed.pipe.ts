@@ -13,7 +13,7 @@ export class TimeElapsedPipe implements PipeTransform {
   transform(_value : any) {
    
       const secs = 60;
-      let current = this.latestQuote.timePosted;
+      let current = parseInt(this.latestQuote.timePosted);
       let seconds = current + 1;
 
       if (seconds < 10){

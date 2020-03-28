@@ -8,7 +8,7 @@ import { Quotes } from '../quotes/quotes';
 })
 export class NewQuoteComponent implements OnInit {
 
-  latestPost = new Quotes (0, "", "", 0, 0, 0);
+  latestPost = new Quotes (0, "", "", 0, 0, "03 s");
 
   @Output() newQuote = new EventEmitter<Quotes>();
 
