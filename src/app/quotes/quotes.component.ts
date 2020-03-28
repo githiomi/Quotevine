@@ -18,20 +18,20 @@ export class QuotesComponent implements OnInit {
     this.quotes[index].additionalInfo = !this.quotes[index].additionalInfo;
   }
 
-  deleteQuote(index){
-    let toDelete = confirm('Are you sure you want to delete this quote? This action cannot be reversed!');
-    if (toDelete){
-      this.quotes[index].splice(index);
-    }else{
-      alert("Pheew! Your quote remains")
-    }
-  }
-
   postedNewQuote(latestQuote){
     latestQuote.id = (this.quotes.length + 1);
     latestQuote.upVote = 0;
     latestQuote.downVote = 0;
     this.quotes.push(latestQuote);
+  }
+
+  deleteQuote(index){
+    let toDelete = confirm('Are you sure you want to delete this quote? This action cannot be reversed!');
+    if (toDelete){
+      this.quotes.splice(index, 1);
+    }else{
+      alert("Pheew! Your quote remains")
+    }
   }
 
   constructor() { }

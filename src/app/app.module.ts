@@ -9,6 +9,7 @@ import { NewQuoteComponent } from './new-quote/new-quote.component';
 import { EditProfileComponent } from './edit-profile/edit-profile.component';
 import { QuotesComponent } from './quotes/quotes.component';
 import { QuoteDetailsComponent } from './quote-details/quote-details.component';
+import { TimeElapsedPipe } from './time-elapsed.pipe';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { QuoteDetailsComponent } from './quote-details/quote-details.component';
     NewQuoteComponent,
     EditProfileComponent,
     QuotesComponent,
-    QuoteDetailsComponent
+    QuoteDetailsComponent,
+    TimeElapsedPipe
   ],
   imports: [
     BrowserModule,
