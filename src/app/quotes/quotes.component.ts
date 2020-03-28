@@ -34,6 +34,30 @@ export class QuotesComponent implements OnInit {
     }
   }
 
+  getTime(){
+
+    setTimeout(() => {
+      const secs = 60;
+      let current = new Date();
+      let seconds = current.getSeconds();
+      let timeRn : any = seconds; 
+        
+      if (timeRn < 10){
+         return "0" + timeRn +" s";
+      }
+
+      if( timeRn > 10 && timeRn < 60){
+        return timeRn +" s";
+      }else if(timeRn > 60){
+        let inMin = (timeRn/secs);
+        return Math.floor(inMin) +" min";
+      }else{
+        return "too long";
+      }
+
+    },1000);
+  }
+  
   constructor() { }
 
   ngOnInit(): void {

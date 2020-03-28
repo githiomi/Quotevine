@@ -9,23 +9,24 @@ export class TimeElapsedPipe implements PipeTransform {
 
   @Input() quotes:Quotes;
 
-  transform(value: any): number {
-    const secs = 60;
-    const min = (secs * 60);
-    // let postedTime = this.quotes.timePosted;
-    let current : Date = new Date();
-    let currentTime : any = new Date( current.getMinutes(), current.getSeconds());
-    let timelapsed = Math.floor( currentTime - value);
-    let timeInSecs = (timelapsed*0.0001);
+  transform(_value : any) {
+   
+      const secs = 60;
+      let current = new Date();
+      let seconds = current.getSeconds();
+      let timeRn : any = seconds;
+        
+      if (timeRn < 10){
+         return "0" + timeRn +" s";
+      }
 
-  if (timeInSecs < 60){
-    return timeInSecs;
-  }else if (timeInSecs > 60){
-    let inMin = (timeInSecs/secs);
-    return inMin;
-  }else if (timeInSecs > 3600){
-    let inHours = (timeInSecs/min);
-    return inHours;
+      if( timeRn > 10 && timeRn < 60){
+        return timeRn +" s";
+      }else if(timeRn > 60){
+        let inMin = (timeRn/secs);
+        return Math.floor(inMin) +" min";
+      }else{
+        return "too long";
+      }
   }
- }
-}
+}    

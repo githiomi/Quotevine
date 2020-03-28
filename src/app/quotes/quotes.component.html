@@ -1,13 +1,13 @@
-<div id="newQuote">
+<div onload="getTime()" id="newQuote">
 <app-new-quote (newQuote) = "postedNewQuote($event)"></app-new-quote>
 
 <div class="container">
    <hr>
    <h2><span style="padding: 5px; border-bottom: 2px solid wheat;">Your Posted Quotes </span></h2>
       <div *ngFor ='let quote of quotes; let i = index' id='postedQuotes'>
-         <span class="index">{{quote.id}}</span> <span class="delete"> <span class="time">{{quote.timePosted | timeElapsed }}</span>
+         <span class="index">{{quote.id}}</span> <span class="delete"> <span class="time">{{ quote.timePosted | timeElapsed }}</span>
             <img (click)='deleteQuote(i)' src="../../assets/delete.png" height="20px" width="20px"> </span> <br><br>
-         
+            <p style="background-color: red;">{{ getTime }}</p>
          "<span class="quote">{{quote.actQuote}}</span>"<br>
             <br>
          <span class="mouseClick">
