@@ -7,23 +7,23 @@ import { Quotes } from './quotes/quotes';
 })
 export class TimeElapsedPipe implements PipeTransform {
 
-  @Input() quotes:Quotes;
+  @Input() quotes:Quotes; 
+  @Input() latestQuote:Quotes;
 
   transform(_value : any) {
    
       const secs = 60;
-      let current = new Date();
-      let seconds = current.getSeconds();
-      let timeRn : any = seconds;
-        
-      if (timeRn < 10){
-         return "0" + timeRn +" s";
+      let current = this.latestQuote.timePosted;
+      let seconds = current + 1;
+
+      if (seconds < 10){
+         return "0" + seconds +" s";
       }
 
-      if( timeRn > 10 && timeRn < 60){
-        return timeRn +" s";
-      }else if(timeRn > 60){
-        let inMin = (timeRn/secs);
+      if( seconds > 10 && seconds < 60){
+        return seconds +" s";
+      }else if(seconds > 60){
+        let inMin = (seconds/secs);
         return Math.floor(inMin) +" min";
       }else{
         return "too long";

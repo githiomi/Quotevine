@@ -4,7 +4,7 @@ export class Quotes {
    }
    additionalInfo:boolean;
    constructor(public id:number, public author:string, public actQuote:string, public upVote:number,
-       public downVote:number, public timePosted:Date){
+       public downVote:number, public timePosted: any){
          this.additionalInfo=false;
        }
 }

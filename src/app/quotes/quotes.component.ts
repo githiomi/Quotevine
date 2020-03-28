@@ -9,19 +9,22 @@ import { Quotes } from './quotes';
 export class QuotesComponent implements OnInit {
 
   quotes: Quotes[] = [
-    new Quotes(1, "William Shakespeare", "And as imagination bodies forth, the forms of things unknown, the poet’s pen turns them to shapes and gives to airy nothing a local habitation and a name.", 10, 3, new Date(Date.now())),
-    new Quotes(2, "Somerset Maugham", "If you can tell stories, create characters, devise incidents, and have sincerity and passion, it doesn’t matter a damn how you write.", 7, 19, new Date(Date.now())),
-    new Quotes(3, "Abraham Lincon", "America will never be destroyed from the outside. If we falter and lose our freedoms, it will be because we destroyed ourselves", 17, 8, new Date(Date.now()))
+    new Quotes(1, "William Shakespeare", "And as imagination bodies forth, the forms of things unknown, the poet’s pen turns them to shapes and gives to airy nothing a local habitation and a name.", 10, 3, "1 Week Ago"),
+    new Quotes(2, "Somerset Maugham", "If you can tell stories, create characters, devise incidents, and have sincerity and passion, it doesn’t matter a damn how you write.", 7, 19, "2 Days Ago"),
+    new Quotes(3, "Abraham Lincon", "America will never be destroyed from the outside. If we falter and lose our freedoms, it will be because we destroyed ourselves", 17, 8, "7 Hours Ago")
   ];
 
   toggleDetails(index){
     this.quotes[index].additionalInfo = !this.quotes[index].additionalInfo;
   }
 
+
   postedNewQuote(latestQuote){
+
     latestQuote.id = (this.quotes.length + 1);
     latestQuote.upVote = 0;
     latestQuote.downVote = 0;
+    latestQuote.timePosted = latestQuote.timePosted;
     this.quotes.push(latestQuote);
   }
 
@@ -32,30 +35,6 @@ export class QuotesComponent implements OnInit {
     }else{
       alert("Pheew! Your quote remains")
     }
-  }
-
-  getTime(){
-
-    setTimeout(() => {
-      const secs = 60;
-      let current = new Date();
-      let seconds = current.getSeconds();
-      let timeRn : any = seconds; 
-        
-      if (timeRn < 10){
-         return "0" + timeRn +" s";
-      }
-
-      if( timeRn > 10 && timeRn < 60){
-        return timeRn +" s";
-      }else if(timeRn > 60){
-        let inMin = (timeRn/secs);
-        return Math.floor(inMin) +" min";
-      }else{
-        return "too long";
-      }
-
-    },1000);
   }
   
   constructor() { }
