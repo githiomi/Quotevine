@@ -33,10 +33,10 @@ It is made completly using sublime Text 3 where all the following files were cre
 No bugs to report at the moment! the system works efficiently at 100% guaranteed. Feel free to search the output on googl to ensure that it coincides exactly.
 
 ## Link to live page
-[Click-Here](https://githiomi.github.io/Quotevine)
+[Click-Here](https://githiomi.github.io/Quotevine/)
 
 ## Setup Instructions
-* git clone [This](https://githiomi.github.io/Quotevine) into your terminal.  
+* git clone [This](https://githiomi.github.io/Quotevine/) into your terminal.  
 * Open the folder in your favourite editor, for example vscode ,is code . and for atom, atom . 
 * Open the index.html in your browser.
 * Enjoy quotevine app

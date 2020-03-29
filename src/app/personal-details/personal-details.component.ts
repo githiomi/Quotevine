@@ -9,7 +9,7 @@ import { Quotes } from '../quotes/quotes';
 export class PersonalDetailsComponent implements OnInit {
 
   username = 'daniel_githiomi';
-  name = 'Daniel Githiomi';
+  name = 'Daniel Githiomi'; 
 
   constructor() { }
 

@@ -4,6 +4,7 @@
 <div class="container">
    <hr>
    <h2><span style="padding: 5px; border-bottom: 2px solid wheat;">Your Posted Quotes </span></h2>
+      <span style="text-align: center; font-style: italic;">You have a total of {{ quotes.length }} posted quotes</span>
       <div *ngFor ='let quote of quotes; let i = index' id='postedQuotes'>
          <span class="index">{{quote.id}}</span> <span class="delete"> <span class="time">{{ quote.timePosted }}</span>
             <img (click)='deleteQuote(i)' src="../../assets/delete.png" height="20px" width="20px"> </span> <br><br>
