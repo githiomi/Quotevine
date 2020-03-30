@@ -21,17 +21,15 @@
 #profilePic{
    cursor: pointer;
    margin: 20px;
-   width: 250px;
-   height: 250px;
+   width: 300px;
+   height: 300px;
    border-radius: 100%;
    background: url('../../assets/profilepic.jpeg');
    background-position: center;
-   float: left;
 }
+
 #accDetails{
-   margin: 20px;
    padding: 35px;
-   margin-left: 250px;
 }
 
 .details{
@@ -44,13 +42,3 @@
       padding-bottom: 3px;
    }
 
-.editable{
-   font-size: small;
-   cursor: pointer;
-   float: right;
-   margin: 10px;
-   padding: 10px;
-   border: 2px solid black;
-   border-radius: 10px;
-   background-color: wheat;
-}
