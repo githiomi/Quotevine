@@ -6,7 +6,7 @@
 
 ## Screenshots
 
-  ![SCREENSHOT](src/assets/quotevine.png)
+  ![SCREENSHOT](assets/quotevine.png)
 
 ## Description
 
